@@ -1,164 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aeneas Jerron Velu - Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aeneas Jerron Velu — Physicist, Researcher & Maker</title>
+<meta name="description" content="Aeneas Jerron Velu: MPhil in Physics, computational researcher in biodegradable implants, data analyst, educator and maker from Sri Lanka.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef3f4;--ink:#13222c;--mute:#54666f;--line:#c9d6da;--accent:#1f5fd6;--tint:#dbe7ea;--card:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 "Source Serif 4",Georgia,serif}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+h1,h2,h3,nav,.btn,.tag,.yr{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif}
+nav{position:sticky;top:0;z-index:5;background:rgba(238,243,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;gap:1.4rem;align-items:center;padding:.8rem 5vw;flex-wrap:wrap}
+nav b{font-weight:800;margin-right:auto;font-size:1.05rem}
+nav a{text-decoration:none;color:var(--ink);font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+main{max-width:980px;margin:0 auto;padding:0 5vw}
+.hero{position:relative;display:grid;grid-template-columns:1.5fr 1fr;gap:2.5rem;align-items:center;padding:4.5rem 0 3.5rem;overflow:hidden}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1;margin:0 0 .6rem;font-weight:800;letter-spacing:-.02em}
+.role{font-family:"Bricolage Grotesque",sans-serif;font-size:1.25rem;font-weight:500;color:var(--accent);margin:0 0 1.2rem}
+.hero p{max-width:34em}
+.photo{position:relative;justify-self:center}
+.photo img{width:min(290px,70vw);aspect-ratio:1;object-fit:cover;object-position:50% 25%;border-radius:50%;border:6px solid var(--card);box-shadow:0 0 0 2px var(--accent);display:block;position:relative}
+.curve{position:absolute;inset:auto -30% -12% -30%;width:160%;height:auto;opacity:.9;pointer-events:none}
+.curve path{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.4s .3s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.curve path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.btn{display:inline-block;padding:.65rem 1.2rem;border-radius:6px;font-weight:700;text-decoration:none;font-size:.95rem;border:2px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:#fff}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font-size:2rem;margin:0 0 1.4rem;letter-spacing:-.01em}
+h3{font-size:1.15rem;margin:0 0 .3rem;line-height:1.3}
+.lead{max-width:38em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.card{background:var(--card);border-left:4px solid var(--accent);padding:1.2rem 1.3rem;border-radius:0 8px 8px 0}
+.card p{margin:.3rem 0 .7rem;font-size:.98rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tag{background:var(--tint);padding:.1rem .6rem;border-radius:99px;font-size:.8rem;font-weight:500}
+.item{display:grid;grid-template-columns:8.5rem 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.yr{color:var(--mute);font-size:.9rem;font-weight:500;padding-top:.15rem}
+.item p{margin:.2rem 0 0;font-size:.98rem}
+.item ul{margin:.4rem 0 0;padding-left:1.1rem;font-size:.98rem}
+.sub{color:var(--mute);font-size:.95rem}
+.pub{font-size:.98rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.two ul{padding-left:1.1rem;margin:.3rem 0 0}
+.two li{margin-bottom:.35rem;font-size:.98rem}
+details{background:var(--card);border-radius:8px;padding:.8rem 1.2rem;margin-top:1rem}
+summary{cursor:pointer;font-family:"Bricolage Grotesque",sans-serif;font-weight:700}
+details ul{padding-left:1.1rem;font-size:.95rem}
+footer{border-top:1px solid var(--line);padding:2rem 5vw;text-align:center;color:var(--mute);font-size:.9rem}
+@media(max-width:760px){.hero,.two{grid-template-columns:1fr}.photo{order:-1;justify-self:start}.item{grid-template-columns:1fr;gap:.1rem}}
+</style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Aeneas Jerron Velu</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav aria-label="Main">
+  <b>Aeneas Jerron</b>
+  <a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+</nav>
+<main>
+<header class="hero">
+  <div>
+    <h1>Aeneas Jerron Velu</h1>
+    <p class="role">Physicist, researcher &amp; maker</p>
+    <p>I simulate how biodegradable medical implants break down inside the body, analyse data for development programmes, and teach people to build things with Arduino, MATLAB and Python. I hold an MPhil in Physics from the University of Jaffna, Sri Lanka.</p>
+    <div class="cta">
+      <a class="btn primary" href="Updated_CV_Aeneas_Jerron.pdf">Download CV</a>
+      <a class="btn" href="mailto:jerronva@gmail.com">Email me</a>
+      <a class="btn" href="https://linkedin.com/in/aeneas-jerron-velu">LinkedIn</a>
+    </div>
+  </div>
+  <div class="photo">
+    <svg class="curve" viewBox="0 0 500 200" fill="none" aria-hidden="true"><path d="M0 20 C 80 25, 120 150, 250 165 S 420 178, 500 180" stroke="#1f5fd6" stroke-width="3" stroke-linecap="round"/></svg>
+    <img src="Aeneas_Jerron.jpg" alt="Portrait of Aeneas Jerron Velu">
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Hi, I'm Aeneas Jerron Velu</h1>
-            <p class="subtitle">Full Stack Developer | Open Source Enthusiast</p>
-            <p class="description">I build web applications and love solving complex problems with code.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
-        </div>
-    </section>
+<section id="about">
+  <h2>About</h2>
+  <p class="lead">My background is in physics and computer science. My research uses numerical methods (finite difference and finite element) to model how polymer scaffolds degrade while bone tissue grows. Alongside research I have worked as a data analyst and, most recently, as an information management associate with IOM (UN Migration) on the cyclone response in Sri Lanka.</p>
+  <p class="lead">I have tutored IGCSE science and maths since 2013 and run maker workshops for students and educators, including a Makerspace programme at the American Center Colombo. I also spent 18 months on a research exchange at Western Norway University of Applied Sciences in Bergen.</p>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I'm a passionate developer focused on creating elegant solutions to real-world problems. 
-                With experience in web development and open-source contributions, I'm always eager to 
-                learn new technologies and collaborate with fellow developers.
-            </p>
-            <p>
-                When I'm not coding, you can find me exploring new tech, contributing to open-source projects, 
-                or sharing knowledge with the developer community.
-            </p>
-        </div>
-    </section>
+<section id="research">
+  <h2>Research</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>Degradation of bone scaffolds</h3>
+      <p>MPhil thesis: a simulation study of how biodegradable scaffolds degrade in bone tissue engineering, combining hydrolysis, crystallisation and tissue growth in one multiphysics model.</p>
+      <div class="tags"><span class="tag">Finite element</span><span class="tag">Reaction-diffusion</span><span class="tag">Biopolymers</span></div>
+    </article>
+    <article class="card">
+      <h3>Molecular weight change in polyesters</h3>
+      <p>Computational analysis of how hydrolysis changes molecular weight in biodegradable polyester implants, published in ACS Omega (2024).</p>
+      <div class="tags"><span class="tag">ACS Omega</span><span class="tag">MATLAB</span><span class="tag">Python</span></div>
+    </article>
+    <article class="card">
+      <h3>Medical image processing</h3>
+      <p>Undergraduate project on identifying lung cancer in CT images using image processing.</p>
+      <div class="tags"><span class="tag">CT imaging</span><span class="tag">Image processing</span></div>
+    </article>
+  </div>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>Brief description of your project and what it does.</p>
-                    <div class="tech-tags">
-                        <span>JavaScript</span>
-                        <span>React</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Code</a>
-                        <a href="#" target="_blank">Live Demo</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>Brief description of your project and what it does.</p>
-                    <div class="tech-tags">
-                        <span>Python</span>
-                        <span>Flask</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Code</a>
-                        <a href="#" target="_blank">Live Demo</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Project 3</h3>
-                    <p>Brief description of your project and what it does.</p>
-                    <div class="tech-tags">
-                        <span>TypeScript</span>
-                        <span>Node.js</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Code</a>
-                        <a href="#" target="_blank">Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="publications">
+  <h2>Publications &amp; conferences</h2>
+  <div class="item"><div class="yr">Jun 2026</div><div class="pub"><h3>A Unified Multiphysics Model for Degradation of Bone Tissue Engineering Scaffolds</h3><p class="sub">Advanced Materials for Clean Energy and Health Applications, Coimbatore Institute of Technology, India</p></div></div>
+  <div class="item"><div class="yr">2025</div><div class="pub"><h3>Modeling Bone Tissue Growth and Scaffold Degradation Using Wolff’s Law and Reaction-Diffusion Dynamics</h3><p class="sub">Advanced Materials for Clean Energy and Health Applications, University of Jaffna</p>
+    <p><b>Also:</b> Exploring the Effect of Temperature on Poly(Lactic-co-Caprolactone) Degradation (co-author); Portable Solar-Powered Water Purification and Hydrogen Production System (co-author).</p></div></div>
+  <div class="item"><div class="yr">2024</div><div class="pub"><h3><a href="https://doi.org/10.1021/acsomega.3c10112">Computational Analysis of Biodegradable Polyester Materials for Biomedical Applications</a></h3><p class="sub">ACS Omega 9 (17), 19108–19116. With P. Thirunavukkarasu, T. Rahman, K. Mustafa, D. Velauthapillai.</p>
+    <p><b>Also:</b> Mechanical evolution of tissue engineering scaffolds (Vingnanam Research Conference); Smart Tracking of Plastic Containers for an Efficient Waste Management Future; Gamification of Plastic Waste Management for Behavioral Change (both International Conference on Plastics &amp; Environmental Sustainability).</p></div></div>
+  <div class="item"><div class="yr">2023</div><div class="pub"><h3>In Silico Study on Biodegradation and Crystallization of Polymeric Implants</h3><p class="sub">Advanced Materials for Clean Energy and Health Applications, Coimbatore Institute of Technology, India</p></div></div>
+  <div class="item"><div class="yr">2021</div><div class="pub"><h3>Computational Modeling and Simulation Study on Degradation of Scaffolds in Bone Tissue Engineering</h3><p class="sub">Technological Advances in Science, Medicine and Engineering Conference</p></div></div>
+</section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>Python</li>
-                        <li>HTML/CSS</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h3>Frontend</h3>
-                    <ul>
-                        <li>React</li>
-                        <li>Vue.js</li>
-                        <li>CSS/Sass</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>Django</li>
-                        <li>RESTful APIs</li>
-                    </ul>
-                </div>
-                <div class="skill-group">
-                    <h3>Tools & Databases</h3>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>MongoDB</li>
-                        <li>PostgreSQL</li>
-                        <li>Docker</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="experience">
+  <h2>Experience &amp; education</h2>
+  <div class="item"><div class="yr">Feb – Jun 2026</div><div><h3>Information Management Associate, SLSC Sector</h3><p class="sub">International Organization for Migration (UN Migration)</p><ul><li>Updated the ShelterCluster website for the Sri Lanka Cyclone Ditwah response.</li><li>Coordinated with government, NGO and CSO partners; handled data management, analysis and reporting.</li><li>Built KoboToolbox assessment tools and supported DTM with tool development and data cleaning.</li></ul></div></div>
+  <div class="item"><div class="yr">Jul 2024 – Jun 2025</div><div><h3>Data Analyst</h3><p class="sub">Institute for Development Research &amp; Training</p><p>Managed and analysed project datasets for research and development programmes.</p></div></div>
+  <div class="item"><div class="yr">2021 – 2024</div><div><h3>Research Assistant</h3><p class="sub">University of Jaffna</p><p>Ran numerical and simulation studies for biodegradable medical implants and coordinated academic writing.</p></div></div>
+  <div class="item"><div class="yr">2018 – 2021</div><div><h3>Teaching Assistant</h3><p class="sub">University of Jaffna &amp; Open University of Sri Lanka</p><p>Led physics lab demonstrations, marked reports and supported course delivery.</p></div></div>
+  <div class="item"><div class="yr">2019 – 2021</div><div><h3>Workshop &amp; Training Facilitator</h3><p>Taught Arduino, PCB design, MATLAB/SIMULINK and IoT to undergraduates and educators, and ran a Makerspace programme for school students at American Center Colombo.</p></div></div>
+  <div class="item"><div class="yr">2013 – present</div><div><h3>Tutor</h3><p>Mathematics, Physics, Chemistry and Biology for IGCSE students.</p></div></div>
+  <div class="item"><div class="yr">2021 – 2025</div><div><h3>MPhil, Physics</h3><p class="sub">University of Jaffna. Research exchange at Western Norway University of Applied Sciences, Bergen (Feb 2022 – Aug 2023).</p></div></div>
+  <div class="item"><div class="yr">2014 – 2018</div><div><h3>BSc, Physics</h3><p class="sub">University of Jaffna</p></div></div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Feel free to reach out! I'm always interested in hearing about new projects and opportunities.</p>
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-link">📧 Email</a>
-                <a href="https://github.com/aeneas-jerron-velu" target="_blank" class="contact-link">🔗 GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link">💼 LinkedIn</a>
-                <a href="https://twitter.com/yourprofile" target="_blank" class="contact-link">𝕏 Twitter</a>
-            </div>
-        </div>
-    </section>
+<section id="projects">
+  <h2>Projects &amp; achievements</h2>
+  <div class="grid">
+    <article class="card"><h3>Solar water purification and hydrogen system</h3><p>A compact unit combining a solar still with water electrolysis. Presented at an international conference, 2025.</p></article>
+    <article class="card"><h3>Smart plastic container tracking</h3><p>A tracking system for more efficient waste management. Presented at an international conference, 2024.</p></article>
+    <article class="card"><h3>Reverse vending machine for PET bottles</h3><p>1st runner-up, Sampath Green Inventor, 2018.</p></article>
+    <article class="card"><h3>Community and youth work</h3><p>Youth Forum Member at American Corner Kandy (2021–2022), leading an English-speaking forum. Participant in the National Youth Social Innovation Challenge, 2018.</p></article>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Aeneas Jerron Velu. All rights reserved.</p>
-    </footer>
+<section id="skills">
+  <h2>Skills &amp; training</h2>
+  <div class="two">
+    <div><h3>Technical skills</h3><ul>
+      <li>Python, MATLAB, C++, FORTRAN, Java, PHP</li>
+      <li>Simulation methods, data analysis, academic writing</li>
+      <li>PCB design, Arduino, microcontroller programming</li>
+      <li>KoboToolbox, Linux/Unix, web development basics</li>
+      <li>Prompt engineering and generative AI tools</li></ul></div>
+    <div><h3>Selected certifications</h3><ul>
+      <li>LK Domain Registry: Database Management Systems &amp; SQL (2026)</li>
+      <li>WIPO Academy: IP Training Strategies (2025)</li>
+      <li>Google (Coursera): Foundations of Project Management and five AI courses (2025)</li>
+      <li>KoboToolbox: Humanitarian Needs Assessment (2025)</li>
+      <li>Harvard (edX): Introduction to Probability (2024)</li></ul></div>
+  </div>
+  <details><summary>More courses</summary><ul>
+    <li>Agriculture.lk: Professional Certificate in Human Resource Management (2025)</li>
+    <li>UoM CODL: Python for Beginners (2023)</li>
+    <li>deeplearning.ai (Coursera): Neural Networks, Project Structuring, Optimization (2022)</li>
+    <li>University of Michigan (Coursera): Python Data Structures (2022)</li>
+    <li>Duke (Coursera): Data Science Math Skills (2022)</li>
+    <li>Harvard (edX): Using Python for Research (2021)</li>
+    <li>American Corner Kandy: Cybersecurity, Business English, DynEd (2021)</li>
+    <li>American Center Colombo: Makerspace Training (2018)</li></ul></details>
+</section>
 
-    <script src="script.js"></script>
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="lead">Open to research, data and education roles, and to collaborations on simulation and maker projects. Based in Sri Lanka.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:jerronva@gmail.com">jerronva@gmail.com</a>
+    <a class="btn" href="https://linkedin.com/in/aeneas-jerron-velu">LinkedIn</a>
+    <a class="btn" href="Updated_CV_Aeneas_Jerron.pdf">Download CV</a>
+  </div>
+</section>
+</main>
+<footer>© 2026 Aeneas Jerron Velu · Sri Lanka</footer>
 </body>
 </html>
